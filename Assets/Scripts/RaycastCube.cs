@@ -12,6 +12,7 @@ public class RaycastCube : MonoBehaviour
     public float rayLength;
     //private bool isGrabbed;
     public Rigidbody rd;
+    
 
     public Transform hands;
     //private Rigidbody grabbedObject;
@@ -28,9 +29,8 @@ public class RaycastCube : MonoBehaviour
     }
     
     Transform currentObjectRaycasted;
-    Rigidbody cubeRb;
     Transform currentObjectParentRaycasted;
-    //bool isDragging = false;
+    bool isDragging = false;
 
     //Vector3 handPosition;
     // Update is called once per frame
@@ -39,16 +39,16 @@ public class RaycastCube : MonoBehaviour
 
         if (OVRInput.GetDown(clickButton))
         {
-            if (Physics.Raycast(rd.transform.position, rd.transform.forward, out vision, rayLength))
+            var mask = LayerMask.GetMask("Button");
+            if (Physics.Raycast(rd.transform.position, rd.transform.forward, out vision, rayLength, mask))
             {
                 if (vision.collider.tag == "Cube")
                 {
                     currentObjectRaycasted = vision.collider.transform;
-                    cubeRb = vision.rigidbody;
                     currentObjectParentRaycasted = currentObjectRaycasted.parent;
-                    //Debug.Log(vision.collider.name + "abc");
                     currentObjectRaycasted.SetParent(hands, true);
-                    cubeRb.isKinematic = true;
+                    currentObjectRaycasted.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    isDragging = true;
                 }
                 else
                 {
@@ -56,19 +56,21 @@ public class RaycastCube : MonoBehaviour
                 }
             }
         }
-        if(currentObjectRaycasted != null)
+
+        if (isDragging == false)
         {
 
         }
+
         if (OVRInput.GetUp(clickButton))
         {
-            if(currentObjectRaycasted != null)
+            if(isDragging)
             {
-                cubeRb.isKinematic = false;
+                currentObjectRaycasted.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 currentObjectRaycasted.SetParent(currentObjectParentRaycasted, true);
-                currentObjectRaycasted = null;
-                currentObjectParentRaycasted = null;
-                cubeRb = null;
+                Destroy(currentObjectParentRaycasted);
+                Destroy(currentObjectRaycasted);
+                isDragging = false;
             }
         }
     }

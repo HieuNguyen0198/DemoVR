@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cube
+  - ScaleX+
+  - ScaleX-
+  - ScaleY+
+  - ScaleY-
+  - ScaleZ+
+  - ScaleZ-
+  - Scale+
+  - Scale-
+  - RotationX
+  - RotationY
+  - RotationZ
+  - ItemSelect
+  - Rotation
   layers:
   - Default
   - TransparentFX
@@ -12,9 +25,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Button
+  - UIS
+  - Scale
   - 
   - 
   - 
