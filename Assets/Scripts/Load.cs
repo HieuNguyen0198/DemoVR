@@ -59,8 +59,6 @@ public class Load : MonoBehaviour
             clone.transform.Rotate(new Vector3(float.Parse(str2[4]), float.Parse(str2[5]), float.Parse(str2[6])));
             clone.transform.localScale = new Vector3(float.Parse(str2[7]), float.Parse(str2[8]), float.Parse(str2[9]));
 
-
-            //Loi o day
             
             //load material
             string str_material = str2[10];

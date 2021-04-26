@@ -24,7 +24,8 @@ public class ChooseMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OVRInput.GetDown(clickButton))
+
+        if (OVRInput.GetDown(clickButton))
         {
             var mask = LayerMask.GetMask("Button");
             if(Physics.Raycast(rbHand.transform.position, rbHand.transform.forward, out vision, rayLeght, mask))
@@ -85,17 +86,18 @@ public class ChooseMaterial : MonoBehaviour
     //xoa object
     public void onClickDelete()
     {
-        /*for (int i = 0; i < GlobalVariable.list.Count; i ++)
+        for (int i = GlobalVariable.list.Count - 1; i >= 0; i --)
         {
             if(GlobalVariable.list[i] == ob)
             {
                 GlobalVariable.list.RemoveAt(i);
+                break;
             }
-        }*/
+        }
 
-        Debug.Log("---> D" + ob);
+        //Debug.Log("---> D" + ob);
         Destroy(ob);
-        EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(null);
 
     }
 }

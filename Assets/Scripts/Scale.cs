@@ -28,7 +28,7 @@ public class Scale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (OVRInput.GetDown(clickButton))
         {
             var mask = LayerMask.GetMask("Scale");

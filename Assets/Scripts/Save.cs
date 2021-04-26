@@ -30,7 +30,7 @@ public class Save : MonoBehaviour
     }
 
     //save with UI
-    public void onClickSaveButton1()
+    public void onClickSaveButton1(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -40,9 +40,10 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot1", GlobalVariable.getStringToSave());
 
         text.text = "1.Room:" + name;
+        btnText.text = name;
     }
 
-    public void onClickSaveButton2()
+    public void onClickSaveButton2(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -52,9 +53,10 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot2", GlobalVariable.getStringToSave());
 
         text.text = "2.Room:" + name;
+        btnText.text = name;
     }
 
-    public void onClickSaveButton3()
+    public void onClickSaveButton3(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -64,9 +66,10 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot3", GlobalVariable.getStringToSave());
 
         text.text = "3.Room:" + name;
+        btnText.text = name;
     }
 
-    public void onClickSaveButton4()
+    public void onClickSaveButton4(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -76,9 +79,10 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot4", GlobalVariable.getStringToSave());
 
         text.text = "4.Room:" + name;
+        btnText.text = name;
     }
 
-    public void onClickSaveButton5()
+    public void onClickSaveButton5(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -88,9 +92,10 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot5", GlobalVariable.getStringToSave());
 
         text.text = "5.Room:" + name;
+        btnText.text = name;
     }
 
-    public void onClickSaveButton6()
+    public void onClickSaveButton6(Text btnText)
     {
         //string name Actice scene
         string name = SceneManager.GetActiveScene().name;
@@ -100,5 +105,6 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetString("slot6", GlobalVariable.getStringToSave());
 
         text.text = "6.Room:" + name;
+        btnText.text = name;
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public static class GlobalVariable
 {
     public static List<GameObject> list = new List<GameObject>();
-
     public static void add(GameObject game)
     {
         list.Add(game);

@@ -26,7 +26,7 @@ public class Rotate : MonoBehaviour
     void Update()
     {
 
-        if(OVRInput.GetDown(clickButton))
+        if (OVRInput.GetDown(clickButton))
         {
             var mask = LayerMask.GetMask("Scale");
             if (Physics.Raycast(rb.transform.position, rb.transform.forward, out vision, rayLenght, mask))
