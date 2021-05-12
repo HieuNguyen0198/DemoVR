@@ -12,8 +12,6 @@ public class Load : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //save = PlayerPrefs.GetString("save");
-        //Debug.Log(save);
         if(GlobalStringName.slot != "")
         {
             save = PlayerPrefs.GetString(GlobalStringName.slot);
@@ -38,8 +36,6 @@ public class Load : MonoBehaviour
 
     public void LoadGame()
     {
-        //List<GameObject> list = new List<GameObject>();
-
         string[] str = save.Split('=');
 
         for (int i = 1; i < str.Length; i++)
@@ -79,9 +75,6 @@ public class Load : MonoBehaviour
                 }
             }
             
-            //clone.GetComponent<MeshRenderer>().material = meshRenderer.material;
-            
-
             //save
             GlobalVariable.add(clone);
         }

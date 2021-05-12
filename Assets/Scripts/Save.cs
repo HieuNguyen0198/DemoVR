@@ -21,12 +21,6 @@ public class Save : MonoBehaviour
             Debug.Log(GlobalVariable.getStringToSave());
             PlayerPrefs.SetString("slot", GlobalVariable.getStringToSave());
         }
-
-        /*if(OVRInput.GetDown(OVRInput.Button.Two))
-        {
-            Debug.Log(GlobalVariable.getStringToSave());
-            PlayerPrefs.SetString("save", GlobalVariable.getStringToSave());
-        }*/
     }
 
     //save with UI

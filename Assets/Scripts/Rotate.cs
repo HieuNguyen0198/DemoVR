@@ -82,83 +82,15 @@ public class Rotate : MonoBehaviour
 
                 Debug.Log(vector3);
 
-                cube.Rotate(vector3);
+                //cube.Rotate(vector3);
+                cube.Rotate(0, R * 30, 0);
 
                 //hide laser pointer
                 laserPointer.laserBeamBehavior = LaserPointer.LaserBeamBehavior.Off;
 
                 currentCloneChildCube.transform.position = cloneChildCube.transform.position;
             }
-        }
-
-
-        /*
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            var mask = LayerMask.GetMask("Scale");
-            if (Physics.Raycast(rb.transform.position, rb.transform.forward, out vision, rayLenght, mask))
-            {
-                if (!checkRotate)
-                {
-                    if (vision.collider.tag == "Rotation")
-                    {
-                        childCube = vision.collider.transform;
-                        cube = childCube.parent.parent;
-
-                        //clone child cube
-                        cloneChildCube = Instantiate(childCube.gameObject, childCube.position, Quaternion.identity);
-                        cloneChildCube.transform.SetParent(rb.transform, true);
-                        cloneChildCube.SetActive(false);
-
-                        currentCloneChildCube = Instantiate(cloneChildCube, childCube.position, Quaternion.identity);
-
-                        Debug.Log(childCube.position);
-                        Debug.Log(cloneChildCube.transform.position);
-
-                        checkRotate = true;
-                    }
-                }
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.Y))
-        {
-            checkRotate = false;
-
-            //unhide laser
-            laserPointer.laserBeamBehavior = LaserPointer.LaserBeamBehavior.On;
-        }
-        if (checkRotate)
-        {
-            Debug.Log(childCube.position);
-            Debug.Log(cloneChildCube.transform.position);
-            if (currentCloneChildCube.transform.position != cloneChildCube.transform.position)
-            {
-                R = Mathf.Sqrt((Mathf.Pow((currentCloneChildCube.transform.position.x - cloneChildCube.transform.position.x), 2)) +
-                 (Mathf.Pow((currentCloneChildCube.transform.position.z - cloneChildCube.transform.position.z), 2)));
-
-                if(isRight(rb.transform.position, cloneChildCube.transform.position, currentCloneChildCube.transform.position))
-                {
-                    R *= -1;
-                }
-
-                Debug.Log(R);
-
-                Vector3 vector3 = new Vector3();
-                vector3.x = cube.localRotation.x;
-                vector3.y = cube.localRotation.y + R*30;
-                vector3.z = cube.localRotation.z;
-
-                Debug.Log(vector3);
-
-                cube.Rotate(vector3);
-
-                //hide laser pointer
-                laserPointer.laserBeamBehavior = LaserPointer.LaserBeamBehavior.Off;
-
-                currentCloneChildCube.transform.position = cloneChildCube.transform.position;
-            }
-        }
-        */
+        }    
     }
 
 

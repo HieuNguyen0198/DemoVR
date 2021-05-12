@@ -46,26 +46,6 @@ public class ChooseMaterial : MonoBehaviour
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            var mask = LayerMask.GetMask("Button");
-            if (Physics.Raycast(rbHand.transform.position, rbHand.transform.forward, out vision, rayLeght, mask))
-            {
-                if (ob != null)
-                {
-                    if (vision.collider.gameObject != ob)
-                    {
-                        childObject.SetActive(false);
-                    }
-                }
-                chooseMaterial.SetActive(true);
-                ob = vision.collider.gameObject;
-                childObject = ob.transform.GetChild(3).gameObject;
-                childObject.SetActive(true);
-            }
-        }
-        //
     }
     public void OnClickChoose(GameObject btn)
     {
@@ -94,10 +74,6 @@ public class ChooseMaterial : MonoBehaviour
                 break;
             }
         }
-
-        //Debug.Log("---> D" + ob);
         Destroy(ob);
-        //EventSystem.current.SetSelectedGameObject(null);
-
     }
 }

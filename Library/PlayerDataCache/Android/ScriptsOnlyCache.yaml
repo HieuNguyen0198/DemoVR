@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ActiveSlotSave
     - ChooseMaterial
-    - Click
     - ControlUIPause
     - HandedInputSelector
     - LaserPointer
@@ -16,7 +15,6 @@ ScriptsOnlyBuild:
     - Rotate
     - Save
     - Scale
-    - ScaleCube
     - SelectObjectUI
     - Spawner
     - SwitchRaycast
@@ -44,11 +42,15 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
+    Unity.XR.Oculus.Editor.dll:
+    - Unity.XR.Oculus.Editor.OculusSettingsEditor
     Unity.XR.Oculus.dll:
     - Unity.XR.Oculus.OculusLoader
     - Unity.XR.Oculus.OculusSettings
@@ -1158,12 +1160,6 @@ ScriptsOnlyBuild:
     className: LipSyncDemo_Control
   - hash:
       serializedVersion: 2
-      Hash: ee98729079998eb63435f99f41b30b9e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Click
-  - hash:
-      serializedVersion: 2
       Hash: 2d75dd1753213123772f51e8448cd92e
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrBoardGame
@@ -1294,12 +1290,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.ImageEffects
     className: CameraMotionBlur
-  - hash:
-      serializedVersion: 2
-      Hash: 2e20aee45c0bb7efaf92884c76136055
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Scale_Rotation
   - hash:
       serializedVersion: 2
       Hash: 755aa9308df9cb5ec0a491ba4f5f09a5
@@ -2478,12 +2468,6 @@ ScriptsOnlyBuild:
     className: Scale
   - hash:
       serializedVersion: 2
-      Hash: 2e20aee45c0bb7efaf92884c76136055
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScaleCube
-  - hash:
-      serializedVersion: 2
       Hash: 8302a05adec609c4b10f8b6cc3443e4c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2788,4 +2772,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Room1.unity
   - Assets/Scenes/Room2.unity
   - Assets/Scenes/Room3.unity
-  playerPath: C:/Users/ota_hieunm/MRTK tutorials/Builds/16.apk
+  playerPath: C:/Users/ota_hieunm/MRTK tutorials/Builds/18.apk
